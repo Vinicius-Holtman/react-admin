@@ -124,6 +124,10 @@ export function Sidebar() {
               selected={selected}
               setSelected={setSelected}
             />
+
+            <Typography variant="h6" color={colors.grey[300]} sx={{ m: "15px 0 5px 20px" }}>
+              Data
+            </Typography>
             <ItemSidebar
               title="Manage Team"
               to="/team"
@@ -145,6 +149,9 @@ export function Sidebar() {
               selected={selected}
               setSelected={setSelected}
             />
+            <Typography variant="h6" color={colors.grey[300]} sx={{ m: "15px 0 5px 20px" }}>
+              Pages
+            </Typography>
             <ItemSidebar
               title="Profile Form"
               to="/form"
@@ -166,6 +173,9 @@ export function Sidebar() {
               selected={selected}
               setSelected={setSelected}
             />
+            <Typography variant="h6" color={colors.grey[300]} sx={{ m: "15px 0 5px 20px" }}>
+              Charts
+            </Typography>
             <ItemSidebar
               title="Bar Chart"
               to="/bar"
