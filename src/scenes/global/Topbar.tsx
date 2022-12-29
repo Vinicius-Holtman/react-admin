@@ -12,7 +12,7 @@ import SearchIcon from "@mui/icons-material/Search"
 export function Topbar() {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
-  const colorMode = useContext(ColorModeContext)
+  const { toggleColorMode } = useContext(ColorModeContext)
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -30,7 +30,7 @@ export function Topbar() {
       </Box>
 
       <Box display="flex">
-        <IconButton onClick={colorMode.toggleColorMode}>
+        <IconButton onClick={toggleColorMode}>
           {theme.palette.mode === "dark" ? (
             <LightModeOutlinedIcon />
           ) : (
