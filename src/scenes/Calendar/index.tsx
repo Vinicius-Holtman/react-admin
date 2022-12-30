@@ -3,6 +3,7 @@ import FullCalendar from "@fullcalendar/react"
 import dayGridPlugin from "@fullcalendar/daygrid"
 import timeGridPlugin from "@fullcalendar/timegrid"
 import interactionPlugin from "@fullcalendar/interaction"
+import listPlugin from '@fullcalendar/list';
 import { Box, List, ListItem, ListItemText, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
 import { tokens } from "../../theme";
@@ -48,7 +49,7 @@ export function Calendar() {
     <Box m="20px">
       <Header title="CALENDAR" subtitle="Full Calendar Interative Page" />
 
-      <Box display="flex" justifyContent="space-between">
+      <Box display="flex" justifyContent="space-between" mt="40px">
         <Box
           flex="1 1 20%"
           sx={{
@@ -85,6 +86,36 @@ export function Calendar() {
               </ListItem>
             ))}
           </List>
+        </Box>
+
+        {/* CALENDAR */}
+        <Box flex="1 1 100%" ml="15px">
+          <FullCalendar 
+            height="75vh"
+            plugins={[
+              dayGridPlugin,
+              timeGridPlugin,
+              interactionPlugin,
+              listPlugin
+            ]}
+            headerToolbar={{
+              left: "prev,next today",
+              center: "title",
+              right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+            }}
+            initialView="dayGridMonth"
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
+            select={handleDateClick}
+            eventClick={handleEventClick}
+            eventsSet={(events) => setCurrentEvents(events as any)}
+            initialEvents={[
+              { id: "1234", title: "All-day event", date: "2022-12-30" },
+              { id: "123456", title: "Daily event", date: "2022-12-28" }
+            ]}
+          />
         </Box>
       </Box>
     </Box>
