@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import { BarChart } from "../../components/BarChart";
 import { Header } from "../../components/Header";
 
 export function Dashboard() {
