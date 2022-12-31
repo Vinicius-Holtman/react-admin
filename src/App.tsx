@@ -13,6 +13,7 @@ import { FAQ } from "./scenes/FAQ";
 import { Bar } from "./scenes/Bar";
 import { Pie } from "./scenes/Pie";
 import { Line } from "./scenes/Line";
+import { Geography } from "./scenes/Geography";
 // import { Team } from "./scenes/team";
 // import { Invoices } from "./scenes/invoices";
 // import { Contacts } from "./scenes/contects";
@@ -46,7 +47,7 @@ function App() {
               <Route path="/bar" element={ <Bar /> }  />
               <Route path="/pie" element={ <Pie /> }  />
               <Route path="/line" element={ <Line /> }  />
-              {/* <Route path="/geography" element={ <Geography /> }  /> */}
+              <Route path="/geography" element={ <Geography /> }  />
             </Routes>
           </main>
         </div>
