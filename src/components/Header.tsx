@@ -12,7 +12,7 @@ export function Header({ subtitle, title }: HeaderProps) {
   const colors = tokens(theme.palette.mode)
 
   return (
-    <Box mb="40px">
+    <Box mb="30px">
       <Typography
         variant="h2"
         color={colors.grey[100]}
