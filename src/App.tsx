@@ -14,16 +14,6 @@ import { Bar } from "./scenes/Bar";
 import { Pie } from "./scenes/Pie";
 import { Line } from "./scenes/Line";
 import { Geography } from "./scenes/Geography";
-// import { Team } from "./scenes/team";
-// import { Invoices } from "./scenes/invoices";
-// import { Contacts } from "./scenes/contects";
-// import { Bar } from "./scenes/bar";
-// import { Form } from "./scenes/form";
-// import { Line } from "./scenes/line";
-// import { Pie } from "./scenes/pie";
-// import { FAQ } from "./scenes/faq";
-// import { Geography } from "./scenes/geography";
-// import { Calendar } from "./scenes/calendar";
 
 function App() {
   const { theme, colorMode } = useMode()
